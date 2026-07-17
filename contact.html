@@ -11,6 +11,10 @@
 
 <body>
 
+    <div id="loader">
+    <div class="spinner"></div>
+    <h2>Sagarika Boutique</h2>
+</div>
     <nav>
         <div class="logo">
     <img src="images/logo.png" alt="Logo">
@@ -137,21 +141,9 @@
 
 </footer>
 
-
+<script src="script.js"></script>
 <script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent page refresh
 
-    document.getElementById("successMessage").style.display = "block";
-
-    // Clear the form
-    this.reset();
-
-    // Hide the message after 4 seconds
-    setTimeout(function() {
-        document.getElementById("successMessage").style.display = "none";
-    }, 4000);
-});
 </script>
 
 </body>
