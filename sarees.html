@@ -80,8 +80,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Premium silk saree perfect for weddings.</p>
 
-<button class="shop-btn">Shop Now</button>
-
+<button class="shop-btn"
+onclick="openModal(
+'images/saree1.jpg',
+'Designer Silk Saree',
+'₹3,999',
+'Beautiful traditional silk saree with premium quality fabric.'
+)">
+Shop Now
+</button>
 </div>
 
 <div class="saree-card">
@@ -94,8 +101,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Traditional handwoven silk saree.</p>
 
-<button class="shop-btn">Shop Now</button>
-
+<button class="shop-btn"
+onclick="openModal(
+'images/saree2.jpg',
+'Kanchipuram Saree',
+'₹6,499',
+'Traditional handwoven silk saree.'
+)">
+Shop Now
+</button>
 </div>
 
 <div class="saree-card">
@@ -108,7 +122,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Stylish saree for parties and receptions.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/saree3.jpg',
+'Designer Party Saree',
+'₹3,999',
+'Stylish saree for parties and receptions.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -122,7 +144,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Lightweight designer floral saree.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/saree4.jpg',
+'Floral Georgette Saree',
+'₹2,299',
+'Lightweight designer floral saree.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -136,7 +166,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Luxury bridal wedding saree.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/saree5.jpg',
+'Wedding Collection',
+'₹7,999',
+'Luxury bridal wedding saree.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -150,7 +188,15 @@ Traditional Beauty with Modern Elegance
 
 <p>Comfortable cotton saree for daily use.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/saree6.jpg',
+'Cotton Daily Wear',
+'₹1,599',
+'Comfortable cotton saree for daily use.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -215,6 +261,43 @@ Traditional Beauty with Modern Elegance
 <p>© 2026 All Rights Reserved</p>
 
 </footer>
+
+<div id="toast"></div>
 <script src="script.js"></script>
+
+<!-- Quick View Modal -->
+
+<div id="quickViewModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-btn">&times;</span>
+
+<img id="modalImage" src="">
+
+<h2 id="modalTitle"></h2>
+
+<h3 id="modalPrice"></h3>
+
+<p id="modalDescription"></p>
+
+
+<div class="modal-buttons">
+
+<button class="cart-btn" onclick="addToCart()">
+🛒 Add to Cart
+</button>
+
+
+<button class="wish-btn" onclick="addToWishlist()">
+❤️ Wishlist
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
