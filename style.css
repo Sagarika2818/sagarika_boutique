@@ -1335,3 +1335,130 @@ nav ul li a.active{
         transform:rotate(360deg);
     }
 }
+
+/* Quick View Popup */
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:9999;
+}
+
+.modal-content{
+    width:420px;
+    max-width:90%;
+    background:white;
+    margin:5% auto;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+    animation:popup .3s ease;
+}
+
+.modal-content img{
+    width:100%;
+    border-radius:10px;
+}
+
+.modal-content h2{
+    margin-top:15px;
+}
+
+.modal-content h3{
+    color:#8a2be2;
+}
+
+.modal-content p{
+    color:#555;
+    margin:15px 0;
+}
+
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.cart-btn,
+.wish-btn{
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.cart-btn{
+    background:#8a2be2;
+    color:white;
+}
+
+.cart-btn:hover{
+    background:#6d1ec8;
+}
+
+.wish-btn{
+    background:#f2f2f2;
+}
+
+.wish-btn:hover{
+    background:#ff4d6d;
+    color:white;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+#toast{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#8a2be2;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:16px;
+    display:none;
+    z-index:10000;
+}
+
+#toast.show{
+    display:block;
+    animation:toastAnim .3s ease;
+}
+
+@keyframes toastAnim{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

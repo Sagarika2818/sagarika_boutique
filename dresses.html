@@ -78,7 +78,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Elegant floral dress for parties and celebrations.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress1.jpg',
+'Floral Party Dress',
+'₹2,499',
+'Elegant floral dress for parties and celebrations.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -92,7 +100,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Perfect designer gown for evening events.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress2.jpg',
+'Evening Gown',
+'₹3,299',
+'Perfect designer gown for evening events.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -106,7 +122,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Traditional Anarkali with modern elegance.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress3.jpg',
+'Anarkali Dress',
+'₹2,999',
+'Traditional Anarkali with modern elegance.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -120,7 +144,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Comfortable and stylish maxi dress.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress4.jpg',
+'Maxi Dress',
+'₹1,999',
+'Comfortable and stylish maxi dress.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -134,7 +166,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Beautiful kurti with matching dupatta.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress5.jpg',
+'Designer Kurti Set',
+'₹1,799',
+'Beautiful kurti with matching dupatta.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -148,7 +188,15 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>Luxury bridal reception gown.</p>
 
-<button class="shop-btn">Shop Now</button>
+<button class="shop-btn"
+onclick="openModal(
+'images/dress6.jpg',
+'Bridal Reception Gown',
+'₹4,999',
+'Luxury bridal reception gown.'
+)">
+Shop Now
+</button>
 
 </div>
 
@@ -177,6 +225,29 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 </section>
 
 <!-- Footer -->
+ <!-- Quick View Modal -->
+<div id="quickViewModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn">&times;</span>
+
+        <img id="modalImage" src="" alt="Dress">
+
+        <h2 id="modalTitle"></h2>
+
+        <h3 id="modalPrice"></h3>
+
+        <p id="modalDescription"></p>
+
+       <div class="modal-buttons">
+    <button class="cart-btn" onclick="addToCart()">🛒 Add to Cart</button>
+    <button class="wish-btn" onclick="addToWishlist()">❤️ Wishlist</button>
+</div>
+
+    </div>
+
+</div>
 
 <footer>
 
@@ -186,7 +257,11 @@ Explore our latest collection of stylish, elegant and fashionable dresses for ev
 
 <p>© 2026 All Rights Reserved</p>
 
+
+
 </footer>
+<div id="toast"></div>
 <script src="script.js"></script>
+
 </body>
 </html>
